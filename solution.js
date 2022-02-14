@@ -1,8 +1,8 @@
 let jonSnowHealth = 100
 
-jonSnowHealth = String(jonSnowHealth)
-
-// jonSnowHealth + ''
+//jonSnowHealth = String(jonSnowHealth)
+//jonSnowHealth = jonSnowHealth.toString(); 
+// jonSnowHealth + '' 
 
 // console.log(jonSnowHealth)
 
@@ -14,19 +14,20 @@ let newWinner = theWinnerIs.replace('Jamie', 'Jon')
 
 if (newWinner.includes('Jon')){
     // console.log('Replaced Jamie with Jon')
+    //console.log(newWinner);
 }
 
 let newWinnerLower = newWinner.toLowerCase()
-// console.log(newWinner)
+ //console.log(newWinnerLower)
 let newWinnerSplit = newWinnerLower.split(' ')
 //console.log(newWinnerSplit)
 let newWinnerKebob = newWinnerSplit.join('-')
-// console.log(newWinnerKebob)
+//console.log(newWinnerKebob)
 
 //We can also accomplish the same result with replaceAll
 //Note - replaceAll only works with Node versions greater than 15.0, if students get an error check their node version with node -v
 newWinner = newWinnerLower.replaceAll(' ', '-')
-
+//console.log(newWinner)
 
 //Write a function we can call to determine if Jon Snow is alive.
 
@@ -34,38 +35,39 @@ function isJonAlive(){
     if(jonSnowHealth > 0){
         console.log('Jon is alive!')
     } else {
-        console.log('RIP in Peace Jon Snow!')
+        console.log('RIP... Jon Snow!')
     }
 }
 
-isJonAlive()
+//isJonAlive()
 
 //write a function to have Jon Snow be attacked
-//after invoking this function a few times, and then invoking isJonAlive, move isJonAlive into surpriseAttack so we only need to make one function call
+//after invoking this function a few times, and then invoking isJonAlive, 
+//move isJonAlive into surpriseAttack so we only need to make one function call
 
 function surpriseAttack(attack){
     jonSnowHealth -= attack
-    // isJonAlive()
+    isJonAlive()
 }
 
-surpriseAttack(20)
-isJonAlive()
+// surpriseAttack(20)
+// isJonAlive()
 // surpriseAttack(10)
 // surpriseAttack(30)
 // surpriseAttack(25)
-// surpriseAttack(15)
+// surpriseAttack(150)
 
 function greeting(person1, person2){
     console.log(`${person1} says hello to ${person2}.`)
 }
 
-greeting('Jon Snow', 'Ned Stark')
+// greeting('Jon Snow', 'Ned Stark')
 
 //demonstrate what happens when we mass more or fewer arguments than parameters
-greeting('Spencer', 'Andrew', 'Adrian')
-greeting('Spencer')
+// greeting('Spencer', 'Andrew', 'Adrian') // -> first two paras were used.
+// greeting('Spencer') // -> second para is defined and used as undefined.
 
-//demonstrate function returns
+// //demonstrate function returns
 
 function rollDie(){
     let sides = [1, 2, 3, 4, 5, 6]
@@ -73,8 +75,8 @@ function rollDie(){
     return sides[randomNumber]
 }
 
-let firstRoll = rollDie()
-let secondRoll = rollDie()
+// let firstRoll = rollDie()
+// let secondRoll = rollDie()
 // console.log(firstRoll, secondRoll)
 
 function rollDice(){
@@ -84,10 +86,10 @@ function rollDice(){
     return firstRoll + secondRoll
 }
 
-let diceTotal = rollDice()
+// let diceTotal = rollDice()
 
 // console.log(diceTotal)
-
+// let sides = [1, 2, 3, 4, 5, 6]
 // let random = Math.random() * sides.length
 // console.log(random)
 // let roll = Math.floor(random)
